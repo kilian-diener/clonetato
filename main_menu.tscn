@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6o75if6wktkh"]
-
-[ext_resource type="Script" path="res://main_menu.gd" id="1_u0knh"]
-
-[node name="MainMenu" type="Node2D"]
-position = Vector2(0.825, 0)
-script = ExtResource("1_u0knh")
-
-[node name="Area2D" type="Area2D" parent="."]

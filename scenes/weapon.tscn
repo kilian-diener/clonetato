@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdb5o84mxw8ps"]
+
+[ext_resource type="Texture2D" uid="uid://xhbbo1o2hfcu" path="res://assets/gun.png" id="1_m7sqw"]
+[ext_resource type="Script" path="res://scenes/weapon.gd" id="2_p7lrl"]
+
+[node name="Weapon" type="Sprite2D"]
+texture = ExtResource("1_m7sqw")
+script = ExtResource("2_p7lrl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(20, -6)

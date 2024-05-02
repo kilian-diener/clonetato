@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bexw582nnbii2"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_h7ru8"]
+[ext_resource type="Texture2D" uid="uid://dv4shmxw3um8f" path="res://assets/player.png" id="2_b8jeu"]
+[ext_resource type="PackedScene" uid="uid://bdb5o84mxw8ps" path="res://scenes/weapon.tscn" id="3_4wuml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jah32"]
+size = Vector2(68, 158)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 8
+script = ExtResource("1_h7ru8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b8jeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_jah32")
+
+[node name="Weapon" parent="." instance=ExtResource("3_4wuml")]
+position = Vector2(60, -1)

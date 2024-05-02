@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr1t36qtmyqfq"]
+
+[ext_resource type="Script" path="res://scenes/gui.gd" id="1_3kngm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvijv"]
+bg_color = Color(0.756567, 0, 0.128418, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7hw0"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 0.729412)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7v0m4"]
+font_size = 40
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_3kngm")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = 1668.0
+offset_top = 985.0
+offset_right = 1883.0
+offset_bottom = 1048.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_dvijv")
+fill_mode = 1
+show_percentage = false
+
+[node name="Countdown" type="Label" parent="."]
+offset_left = 863.0
+offset_top = 15.0
+offset_right = 921.0
+offset_bottom = 75.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m7hw0")
+text = "20"
+label_settings = SubResource("LabelSettings_7v0m4")
+horizontal_alignment = 1
+vertical_alignment = 1
